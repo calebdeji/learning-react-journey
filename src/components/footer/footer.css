@@ -1,0 +1,9 @@
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url(../../footer.jpg);
+    color: rgba(255,255,255);
+}
+.footer div{
+    width: 40%;
+}
