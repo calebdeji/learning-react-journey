@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##Ogunwale Pelumi Caleb
+## Ogunwale Pelumi Caleb
 I created this repository in order to commit whatever I learn in React. The instructions below are to guild me on some basic stuff
 
 ## Available Scripts
