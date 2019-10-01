@@ -4,3 +4,56 @@
 >You could use js functions or ES6 classes to define components
 > When React sees an element representing a user-defined component, 
 >it passes JSX attributes to this component as a single object. We call this object “props”.
+
+
+## State and Lifecycle
+
+>State is similar to props, but it is private and fully controlled by the component.
+
+>The render() function should be pure, meaning that it does not modify component state, 
+>it returns the same result each time it’s invoked, and 
+>it does not directly interact with the browser.
+> the render is method is called anytime there is a change in state
+
+>Typically, in React, constructors are only used for two purposes:
+>Initializing local state by assigning an object to this.state.
+>Binding event handler methods to an instance.
+
+>whenever a component is rendered to the DOM for the first time, it is called mounting
+>whenever the component is removed from the DOM, It is called unmounting
+
+> Life cycles methods are
+componentDidMount() {
+    //this method runs after the output of the component has been renderedto the DOM
+}
+componentWillUnmount() {
+
+}
+
+######### Things to mnow about setState > A state is often called local or encapsulated
+> Do not modify a state directly instead
+> Use setState
+
+>State updates maybe asynchronous
+< Example// Correct
+this.setState((state, props) => ({
+  counter: state.counter + props.increment
+}));
+// Wrong
+this.setState({
+  counter: this.state.counter + this.props.increment,
+});
+
+// Correct
+this.setState((state, props) => ({
+  counter: state.counter + props.increment
+}));
+
+
+
+
+///////////////////////////////////////// HANDLING EVENTS ///////////////////////////////////////////////////////////////////
+
+>difference is that you cannot return false to prevent default behavior in React. You must call preventDefault explicitly
+>When using React you should generally not need to call addEventListener to add listeners to a DOM element after it is created. 
+>Instead, just provide a listener when the element is initially rendered.

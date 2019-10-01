@@ -3,6 +3,8 @@
     justify-content: space-around;
     background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url(../../footer.jpg);
     color: rgba(255,255,255);
+    height: 200px;
+    align-items: center;
 }
 .footer div{
     width: 40%;
