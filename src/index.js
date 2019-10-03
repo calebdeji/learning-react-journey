@@ -26,4 +26,4 @@ function All(){
         </div>
     )
 }
-ReactDOM.render(<All/>,document.getElementById('body'));
+ReactDOM.render(<All/>,document.getElementById('root'));
