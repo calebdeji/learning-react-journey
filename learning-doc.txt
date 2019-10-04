@@ -57,3 +57,7 @@ this.setState((state, props) => ({
 >difference is that you cannot return false to prevent default behavior in React. You must call preventDefault explicitly
 >When using React you should generally not need to call addEventListener to add listeners to a DOM element after it is created. 
 >Instead, just provide a listener when the element is initially rendered.
+
+
+//////////////////////////////////////////////////////////////////////
+for preventing the componentnot to render based on a condition, use if and else. condition false, return null

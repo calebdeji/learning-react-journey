@@ -1,8 +1,18 @@
 import React from 'react'
 class UserGreeting extends React.Component{
+    constructor(props){
+        super(props);
+        this.props = props;
+    }
     render(){
         return(
-            <p>Welcome Back!</p>
+            /**
+             * applying inline if   
+             */
+            <p>Welcome Back {this.props.userName.length!==0 && this.props.userName}</p>
+            /**
+             * you can use ternary operator for inline div
+             */
         );
     }
 }
@@ -37,7 +47,7 @@ export default class Greeting extends React.Component{
         if(this.state.isUserLoggedIn){
             console.log("logged in : ",this.state.isUserLoggedIn);
             return(
-                <UserGreeting/>
+                <UserGreeting userName="Caleb"/>
             );
             
         }
