@@ -61,3 +61,25 @@ this.setState((state, props) => ({
 
 //////////////////////////////////////////////////////////////////////
 for preventing the componentnot to render based on a condition, use if and else. condition false, return null
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+we use the map() function to take an array of numbers and double their values. We assign the new array 
+returned by map() to the variable doubled and log it:
+
+The map() method in JavaScript creates an array by calling a specific function on each element present in the parent array.
+It is a non-mutating method. Generally map() method is used to iterate over an array and calling function on every element of array.
+array.map(function(currentValue, index, arr), thisValue)
+
+function(currentValue, index, arr): It is required parameter and it runs on each element of array. It contains three parameters which are listed below:
+currentValue: It is required parameter and it holds the value of current element.
+index: It is optional parameter and it holds the index of current element.
+arr: It is optional parameter and it holds the array.
+thisValue: It is optional parameter and used to hold the value of passed to the function.
+
+
+
+Keys help React identify which items have changed, are added, or are removed
+
+A good rule of thumb is that elements inside the map() call need keys.
+

@@ -2,8 +2,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Nav from './components/nav/nav'
-import Body from './components/indexmain/main'
 import Greeting from './components/Greeting/greeting'
+import Body from './components/indexmain/main'
+import MultipleList from './components/MultipleList/MultipleList'
 import ToggleButton from './components/swicth/swicth'
 import Footer from './components/footer/footer'
 import './App.css';
@@ -30,6 +31,7 @@ class All extends React.Component{
                 <Greeting/>
                 <Nav/>
                 <Body text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci nam voluptas reprehenderit nulla dignissimos quos facere molestias ratione temporibus quia consequuntur, aut distinctio nobis doloribus deleniti perspiciatis quod consequatur voluptatibus harum illum. Quas repudiandae fugiat ab esse deserunt accusamus dolor quia aliquid, minus magnam eligendi pariatur consequatur, natus nostrum velit accusantium ducimus, quisquam voluptas possimus? Autem, consectetur? Maxime molestias earum est quia nisi cumque facere, alias eum id veniam velit vel quae amet suscipit! Culpa ab minima natus, tempore fuga, facere deleniti officiis magni fugiat recusandae id inventore. Ipsum voluptates repellat voluptatum suscipit assumenda ea porro eligendi perspiciatis nostrum nam!"/>
+                <MultipleList/>
                 <ToggleButton/>
                 <Footer/>
             </div>

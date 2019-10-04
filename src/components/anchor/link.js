@@ -4,6 +4,6 @@ import './link.css'
 
 export default function DefaultLink(props){
     return(
-        <a href={props.homeLink} alt={props.linkAlternateText}>{props.linkText}</a>
+        <a href={props.homeLink} alt={props.linkAlternateText} className ="nav-link">{props.linkText}</a>
     );
 }
