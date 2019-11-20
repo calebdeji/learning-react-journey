@@ -20,7 +20,7 @@ class GuestGreeting extends React.Component{
     render(){
         return(
             <p>Please Sign Up</p>
-        )
+        );
     }
 }
 export default class Greeting extends React.Component{
@@ -52,7 +52,6 @@ export default class Greeting extends React.Component{
             
         }
         else{
-            // console.log("not logged in : ", this.isLoggedIn);
             return <GuestGreeting/>;
         }
     }
