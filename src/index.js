@@ -2,13 +2,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 // import Nav from './components/nav/nav'
-import {Route, Link, BrowserRouter as Router} from 'react-router-dom';
+import {Route, Link, BrowserRouter as Router, Switch} from 'react-router-dom';
 import Form from './components/Form/Form'
 import Greeting from './components/Greeting/greeting'
 import Body from './components/indexmain/main'
 import MultipleList from './components/MultipleList/MultipleList'
 import ToggleButton from './components/swicth/swicth'
 import Footer from './components/footer/footer'
+import NotFoundPage from './components/NotFoundPage/NotFoundPage';
 import './App.css';
 import './index.css';
 import * as serviceWorker from './serviceWorker'
@@ -24,7 +25,28 @@ serviceWorker.unregister();
  * to save user session status
  */
 
-export default class All extends React.Component{
+class Routing extends React.Component{
+    constructor(props){
+        super(props);
+        this.props = props;
+    }
+    render(){
+        return(
+            <Router>
+                <nav className="nav">
+                    <Link to= '/' className = "nav__element">Home</Link>
+                    <Link to = '/components/Form/Form' className = "nav__element">Form</Link>
+                </nav>
+                <Switch>
+                    <Route exact path = '/' component={All}/>
+                    <Route path ='/components/Form' component={Form}/>
+                    <Route component ={NotFoundPage}/>
+                </Switch>
+            </Router>
+        );
+    }
+}
+class All extends React.Component{
     
     render(){
         return(
@@ -41,22 +63,5 @@ export default class All extends React.Component{
         )
     }
 }
-class Routing extends React.Component{
-    constructor(props){
-        super(props);
-        this.props = props;
-    }
-    render(){
-        return(
-            <Router>
-                <nav className="nav">
-                    <Link to= '/' className = "nav__element">Home</Link>
-                    <Link to = '/components/Form/Form' className = "nav__element">Form</Link>
-                </nav>
-                <Route exact path = '/' component={All}/>
-                <Route path ='/components/Form' component={Form}/>
-            </Router>
-        );
-    }
-}
+
 ReactDOM.render(<Routing/>,document.getElementById('root'));
