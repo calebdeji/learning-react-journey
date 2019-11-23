@@ -3,33 +3,42 @@ import React from 'react';
 import './form.css';
 
 export default class Form extends React.Component{
-    constructor(props){
-        super(props);
-        this.props = props;
-        this.state = {email : '',
+    // constructor(props){
+    //     super(props);
+    //     this.props = props;
+    //     this.state = {email : '',
+    //         passwordValue : '', 
+    //         selectValue : '',
+    //         multipleSelect : []
+    //     };
+    //     this.handleEmailInput = this.handleEmailInput.bind(this);
+    //     this.handleSelection = this.handleSelection.bind(this);
+    //     this.handlePasswordInput = this.handlePasswordInput.bind(this);
+    //     this.handleFormSubmit = this.handleFormSubmit.bind(this);
+
+    // }
+
+    // Alternative and fastest way to do the above...
+    state = {email : '',
             passwordValue : '', 
             selectValue : '',
             multipleSelect : []
-        };
-        this.handleEmailInput = this.handleEmailInput.bind(this);
-        this.handleSelection = this.handleSelection.bind(this);
-        this.handlePasswordInput = this.handlePasswordInput.bind(this);
-        this.handleFormSubmit = this.handleFormSubmit.bind(this);
+        }
 
-    }
-    handleEmailInput(event){
+    handleEmailInput = (event) => {
         this.setState({email: event.target.value.toLowerCase()});
     }
-    handleSelection(event){
+    handleSelection = (event) => {
         this.setState({selectValue:event.target.value});
     }
-    handlePasswordInput(event){
+    handlePasswordInput = (event) => {
         this.setState({passwordValue : event.target.value});
     }
-    handleFormSubmit(event){
+    handleFormSubmit = (event) => {
         event.preventDefault();
         console.log("state", this.state);
     }
+
     render(){
         return(
             <form action="#" method="POST" className="form" onSubmit={this.handleFormSubmit}>

@@ -3,6 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Ogunwale Pelumi Caleb
 I created this repository in order to commit whatever I learn in React. The instructions below are to guild me on some basic stuff
 
+A clear reminder I really didn't follow 'the best react practice because this is new to me'. I will gorw to learn more
 ## Available Scripts
 
 In the project directory, you can run:

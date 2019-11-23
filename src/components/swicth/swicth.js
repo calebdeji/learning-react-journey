@@ -6,10 +6,11 @@ export default class ToggleButton extends React.Component{
         this.state = {toogle: false};
         this.handleClick = this.handleClick.bind(this);
     }
-    handleClick(){
+    handleClick(data){
         this.setState((state)=>({
             toogle : !state.toogle
         }));
+        // console.log(data)
     }
      //yet to learn, to pass parameter to an handler
      /**
@@ -21,7 +22,9 @@ export default class ToggleButton extends React.Component{
       */
     render(){
         return(
-            <button className="button-toogle" onClick={this.handleClick}>{this.state.toogle ? 'on' : 'off'}</button>
+            <button className="button-toogle" onClick={ this.handleClick }>{this.state.toogle ? 'on' : 'off'}</button>
+            // <button className="button-toogle" onClick={ () => this.handleClick('I am here...') }>{this.state.toogle ? 'on' : 'off'}</button>
+
         )
     }
 }

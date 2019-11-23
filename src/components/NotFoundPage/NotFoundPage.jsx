@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './notFoundPage.css';
 import Gif from './not.gif';
 
-export default class NotFoundPage extends React.Component{
+export default class NotFoundPage extends Component{
     constructor(props){
         super(props);
         this.props = props;

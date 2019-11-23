@@ -1,9 +1,8 @@
 import React from 'react'
-// import ReactDOM from 'react-dom'
 import './link.css'
 
-export default function DefaultLink(props){
+export default function DefaultLink({ homeLink, linkAlternateText, linkText }){
     return(
-        <a href={props.homeLink} alt={props.linkAlternateText} className ="nav-link">{props.linkText}</a>
+        <a href={homeLink} alt={linkAlternateText} className ="nav-link">{linkText}</a>
     );
 }

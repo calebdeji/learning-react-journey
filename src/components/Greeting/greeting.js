@@ -1,4 +1,5 @@
 import React from 'react'
+
 class UserGreeting extends React.Component{
     constructor(props){
         super(props);
@@ -9,7 +10,7 @@ class UserGreeting extends React.Component{
             /**
              * applying inline if   
              */
-            <p>Welcome Back {this.props.userName.length!==0 && this.props.userName}</p>
+            <p>Welcome Back {this.props.userName.length !== 0 && this.props.userName}</p>
             /**
              * you can use ternary operator for inline div
              */
@@ -43,6 +44,8 @@ export default class Greeting extends React.Component{
             localStorage.setItem("user-status",true);
         }
     }
+
+    
     render(){
         if(this.state.isUserLoggedIn){
             console.log("logged in : ",this.state.isUserLoggedIn);
