@@ -8,6 +8,7 @@ import Greeting from './components/Greeting/greeting'
 import Body from './components/indexmain/main'
 import MultipleList from './components/MultipleList/MultipleList'
 import ToggleButton from './components/swicth/swicth'
+import Calculator from './Temparature/Calculator/Calculator'
 import Footer from './components/footer/footer'
 import NotFoundPage from './components/NotFoundPage/NotFoundPage';
 import './App.css';
@@ -35,11 +36,13 @@ class Routing extends React.Component{
             <Router>
                 <nav className="nav">
                     <Link to= '/' className = "nav__element">Home</Link>
-                    <Link to = '/components/Form/Form' className = "nav__element">Form</Link>
+                    <Link to = '/components/Form' className = "nav__element">Form</Link>
+                    <Link to = '/Temperature/Calculator' className = "nav__element">Calculator</Link>
                 </nav>
                 <Switch>
                     <Route exact path = '/' component={All}/>
                     <Route path ='/components/Form' component={Form}/>
+                    <Route path = '/Temperature/Calculator' component={Calculator}/>
                     <Route component ={NotFoundPage}/>
                 </Switch>
             </Router>
